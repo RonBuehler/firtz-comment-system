@@ -1,0 +1,67 @@
+<style type="text/css">
+	.ron-commentform_container {
+		background-color:none;
+	}
+	.ron-commentform_container form legend {
+		font-size:14px;
+	}
+	.ron-commentform_container form legend {
+		font-size:14px;
+		height: 16px;
+		border:0;
+	}
+	.ron-commentform_submit {
+		height: 50px;
+		padding: 15px !important;
+		border-style:none;
+		background-color: #f00 !important;
+		color: #fff;
+	}
+	.ron-commentform_submit:hover {
+		height: 50px;
+		padding: 15px !important;
+		border-style:none;
+		background-color: #000 !important;
+		color: #fff;
+	}
+</style>
+
+<div class="ron-commentform_container">
+	<form method="POST" id="ron-commentform_{{@epiID}}" name="ron-commentform_{{@epiID}}" action="" onsubmit="return processCommentSubmit(jQuery(this), '{{@epiID}}');">
+		<fieldset>
+			<fieldset>
+				<legend>{{@dict_comm_name}}:<span title="{{@dict_comm_required}}" style="color:red;">*</span></legend>
+				<input type="text" style="width:100%" value="" name="author">
+			</fieldset>
+
+			<fieldset>
+				<legend>{{@dict_comm_email}}:<span title="{{@dict_comm_required}}" style="color:red;">*</span></legend>
+				<input type="text" style="width:100%" value="" name="email">
+			</fieldset>
+
+			<fieldset>
+				<legend>{{@dict_comm_website}}:</legend>
+				<input type="text" style="width:100%" value="" name="website">
+			</fieldset>
+
+			<fieldset>
+				<legend>{{@dict_comm_message}}:<span title="{{@dict_comm_required}}" style="color:red;margin-right:5px;">*</span></legend>
+				<div style="vertical-align:top;">
+					<textarea style="width:100%;height:180px;" name="message" type="text"></textarea>
+				</div>
+			</fieldset>
+
+			<input type="hidden" value="{{@epiID}}" id="epiID" name="epiID">
+			<input type="hidden" value="0" id="replytoid" name="replytoid">
+
+			<img src="data:image/png;base64,{{@captcha}}" id="cptchImg" name="cptchImg" title="captcha" alt="captcha" />
+			<label for="code">Security Code</label> <input type="text" name="code"/>
+
+			<div id="ron-commentform_errormessage" name="ron-commentform_errormessage" style="color: #ff0000;"></div>
+
+			<div style="text-align:right;position:relative;">
+				<button class="ron-commentform_submit" name="submit">{{@dict_comm_submit}}</button>
+			</div>
+		</fieldset>
+	</form>
+</div>

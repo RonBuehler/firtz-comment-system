@@ -1,0 +1,31 @@
+<style type="text/css">
+	.ron-commentform_comment-container {}
+	.ron-commentform_commenthead {
+		font-weight:bold;
+		border-bottom: 1px #000 solid;
+	}
+	.ron-commentform_commentmsg {
+		padding-bottom:1em;
+	}
+	.ron-commentform_commentmsg a {
+		font-weight:bold;
+	}
+</style>
+
+<div id="thxmsg{{@epiID}}" name="thxmsg{{@epiID}}" style="margin-top: 30px; margin-bottom: 15px;">&nbsp;</div>
+<repeat group="{{@commentsData}}" value="{{@post}}" key="{{@key}}">
+	<div class="well well-small">
+		<div class="ron-commentform_comment-container">
+			<div class="ron-commentform_commenthead">{{@post.author}}</div>
+			<div class="ron-commentform_commentmsg">{{@post.message | raw}}</div>
+			<div>
+				<small>
+ 					<i class="icon-time"></i>&nbsp;{{@comments->time_difference(@post.time_created, true)}}&nbsp;&nbsp;
+<!--
+ 					<a title="{{@dict_reply}}" onclick="replyComment('{{@epiID}}', '{{@post.id}}');" style="cursor:pointer !important;"><i class="icon-share-alt"></i>&nbsp;{{@dict_reply}}</a>
+-->
+				</small>
+			</div>
+		</div>
+	</div>
+</repeat>

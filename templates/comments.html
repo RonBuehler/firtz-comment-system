@@ -1,0 +1,29 @@
+<style type="text/css">
+	.hideshowcomments {
+		height: 50px;
+		padding: 15px !important;
+		color: #FFFFFF !important;
+		background-color: #FF0000 !important;
+		vertical-align: middle;
+	}
+
+	.hideshowcomments:hover {
+		height: 50px;
+		padding: 15px !important;
+		color: #FFFFFF !important;
+		background-color: #000000 !important;
+		vertical-align: middle;
+	}
+
+	.comment-container {
+		margin-top: 20px !important;
+		margin-bottom: 20px !important;
+	}
+</style>
+
+
+<div class="comment-container">
+   <a class="hideshowcomments" onclick="loadComments(jQuery(this), '{{@item.guid}}');">
+     <span id="commTitle" style="cursor:pointer !important;">{{@dict_showcomments}}</span>
+   </a>
+</div>
