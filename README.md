@@ -13,6 +13,24 @@ Dieses Kommentarsystem für den [firtz podcast publisher](http://firtz.org/) ent
 ##Installation
 Folgende Schritte müssen für die Installation durchgeführt werden:
 
+* Das [Firtz Comment System](https://github.com/RonBuehler/firtz-comment-system) herunterladen und in den Ordner der Firtz-Installation entpacken.
+
+* Änderungen an den folgenden Dateien durchführen:
+
+##dsadsa
+__dict/de.php__
+
+Einfügen:
+
+`'dict_comm_required'=>'Pflichtfeld',
+'dict_comm_name'=>'Dein Name',
+'dict_comm_email'=>'Email',
+'dict_comm_website'=>'Website',
+'dict_comm_message'=>'Kommentar',
+'dict_comm_submit'=>'Abschicken'`
+
+
+
 
 ##Kontakt
 
