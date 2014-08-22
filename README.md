@@ -66,8 +66,8 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
 		<include href="disqus.html"/>
 	</check>
     </check>
-        <check if="{{@feedattr.commentsystem == 'firtz'}}">
-        	<include href="comments.html"/>
+    <check if="{{@feedattr.commentsystem == 'firtz'}}">
+      	<include href="comments.html"/>
     </check>
     ```
 
@@ -84,7 +84,7 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
 	</check>
     </check>
     <check if="{{@feedattr.commentsystem == 'firtz'}}">
-	<include href="comments.js"/>
+      	<include href="comments.js"/>
     </check>    
     ```
 
