@@ -90,7 +90,7 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
     </check>    
     ```
     
-* Der Ordner comments/admin benötigt einen Verzeichnisschutz.
+* Der Ordner comments/admin benötigt einen Verzeichnisschutz.  
 Im Zweifel bitte an den Provider wenden.
 
 * Der Ordner comments/files benötigt Schreibrechte, damit dort die Kommentardateien abgelegt werden können.  
@@ -105,6 +105,12 @@ Nun habt ihr die Möglichkeit, die Kommentare, sofern vorhanden, auszublenden, e
 
 
 ##Importer
+Für den Fall, das ihr bereits Kommentare in eurem Firtz habt, die noch bei Disqus liegen, habe ich einen kleinen Importer gebaut. Hier sind die Schritte um die alten Kommentare zu übertragen:
+* Auf https://disqus.com einloggen.
+* Im Admin-Bereich auf Discussions -> Export gehen und den Export durchführen.
+* Die exportierte Datei entpacken und in "import" (ohne Dateiendung) umbenennen.
+* Diese Datei in den Ordner comments/admin legen und dann die URL http://urlderwebseite.xxx/comments/admin/importer.php starten.
+* Danach am Besten sowohl die import, als auch die importer.php aus dem Ordner comments/admin löschen, da sie nicht mehr gebraucht werden.
 
 
 ##Kontakt
