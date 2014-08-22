@@ -17,15 +17,15 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
 
 * Änderungen an den folgenden Dateien durchführen:
 
-        Einfügen in dict/de.php
-      ```
-      'dict_comm_required'=>'Pflichtfeld',
-      'dict_comm_name'=>'Dein Name',
-      'dict_comm_email'=>'Email',
-      'dict_comm_website'=>'Website',
-      'dict_comm_message'=>'Kommentar',
-      'dict_comm_submit'=>'Abschicken'
-      ```
+      Einfügen in dict/de.php
+    ```
+    'dict_comm_required'=>'Pflichtfeld',
+    'dict_comm_name'=>'Dein Name',
+    'dict_comm_email'=>'Email',
+    'dict_comm_website'=>'Website',
+    'dict_comm_message'=>'Kommentar',
+    'dict_comm_submit'=>'Abschicken'
+    ```
     
       Einfügen in dict/en.php
     ```
@@ -47,11 +47,46 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
     
       Ändern an index.php
     ```
-    Vor die Zeile $firtz = new firtz($main); einfügen:
+    ***Vor die Zeile $firtz = new firtz($main); einfügen:***
+    
     $comments = new comments($main);
     $main->set('comments',$comments);
     ```
+    
+      Ändern in templates/site.html
+    ```
+    <check if="{{@feedattr.disqus}}">
+	<include href="disqus.html"/>
+    </check>
 
+    *** ersetzen durch ***
+    
+    <check if="{{@feedattr.commentsystem == 'disqus'}}">
+	<check if="{{@feedattr.disqus}}">
+		<include href="disqus.html"/>
+	</check>
+    </check>
+        <check if="{{@feedattr.commentsystem == 'firtz'}}">
+        	<include href="comments.html"/>
+    </check>
+    ```
+
+    ```
+    <check if="{{@feedattr.disqus}}">
+        <include href="disqus_multiple.js"/>
+    </check>
+    
+    *** ersetzen durch***
+    
+    <check if="{{@feedattr.commentsystem == 'disqus'}}">
+	<check if="{{@feedattr.disqus}}">
+		<include href="disqus_multiple.js"/>
+	</check>
+    </check>
+    <check if="{{@feedattr.commentsystem == 'firtz'}}">
+	<include href="comments.js"/>
+    </check>    
+    ```
 
 
 ##Kontakt
