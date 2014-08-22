@@ -17,17 +17,21 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
 
 * Änderungen an den folgenden Dateien durchführen:
 
-##dsadsa
-__dict/de.php__
-
-Einfügen:
-
+__dict/de.php (Einfügen)__
 `'dict_comm_required'=>'Pflichtfeld',
 'dict_comm_name'=>'Dein Name',
 'dict_comm_email'=>'Email',
 'dict_comm_website'=>'Website',
 'dict_comm_message'=>'Kommentar',
 'dict_comm_submit'=>'Abschicken'`
+
+__dict/en.php (Einfügen)__
+`'dict_comm_required'=>'Required Field',
+'dict_comm_name'=>'Your name',
+'dict_comm_email'=>'Email',
+'dict_comm_website'=>'Website',
+'dict_comm_message'=>'Comment',
+'dict_comm_submit'=>'Submit'`
 
 
 
