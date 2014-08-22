@@ -17,26 +17,40 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
 
 * Änderungen an den folgenden Dateien durchführen:
 
-__dict/de.php (Einfügen)__
-```
-'dict_comm_required'=>'Pflichtfeld',
-'dict_comm_name'=>'Dein Name',
-'dict_comm_email'=>'Email',
-'dict_comm_website'=>'Website',
-'dict_comm_message'=>'Kommentar',
-'dict_comm_submit'=>'Abschicken'
-```
-
-__dict/en.php (Einfügen)__
-```
-'dict_comm_required'=>'Required Field',
-'dict_comm_name'=>'Your name',
-'dict_comm_email'=>'Email',
-'dict_comm_website'=>'Website',
-'dict_comm_message'=>'Comment',
-'dict_comm_submit'=>'Submit'
-```
-
+        Einfügen in dict/de.php
+      ```
+      'dict_comm_required'=>'Pflichtfeld',
+      'dict_comm_name'=>'Dein Name',
+      'dict_comm_email'=>'Email',
+      'dict_comm_website'=>'Website',
+      'dict_comm_message'=>'Kommentar',
+      'dict_comm_submit'=>'Abschicken'
+      ```
+    
+      Einfügen in dict/en.php
+    ```
+    'dict_comm_required'=>'Required Field',
+    'dict_comm_name'=>'Your name',
+    'dict_comm_email'=>'Email',
+    'dict_comm_website'=>'Website',
+    'dict_comm_message'=>'Comment',
+    'dict_comm_submit'=>'Submit'
+    ```
+    
+      Einfügen  in feed.cfg
+    ```
+    #: Dieser Punkt entscheided darüber, ob Disqus oder das neue Kommentarsystem genutzt wird
+    commentsystem:
+    #: disqus
+    firtz
+    ```
+    
+      Ändern an index.php
+    ```
+    Vor die Zeile $firtz = new firtz($main); einfügen:
+    $comments = new comments($main);
+    $main->set('comments',$comments);
+    ```
 
 
 
