@@ -2,9 +2,11 @@
 *firtz comment system*  
 *Version 0.1b*
 
+
 ##Über
 
 Dieses Kommentarsystem für den [firtz podcast publisher](http://firtz.org/) entstand aus der Idee heraus, das darin eingebundene Disqus-Kommentarsystem durch eine Eigenentwicklung zu ersetzen um von diesem Dienst unabhängig zu sein.
+
 
 ##Voraussetzungen
 * Eine laufende [Firtz-Installation](https://github.com/eazyliving/firtz/)
@@ -62,9 +64,9 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
     *** ersetzen durch ***
     
     <check if="{{@feedattr.commentsystem == 'disqus'}}">
-	<check if="{{@feedattr.disqus}}">
-		<include href="disqus.html"/>
-	</check>
+      	<check if="{{@feedattr.disqus}}">
+	      	<include href="disqus.html"/>
+      	</check>
     </check>
     <check if="{{@feedattr.commentsystem == 'firtz'}}">
       	<include href="comments.html"/>
@@ -76,17 +78,33 @@ Folgende Schritte müssen für die Installation durchgeführt werden:
         <include href="disqus_multiple.js"/>
     </check>
     
-    *** ersetzen durch***
+    *** ersetzen durch ***
     
     <check if="{{@feedattr.commentsystem == 'disqus'}}">
-	<check if="{{@feedattr.disqus}}">
-		<include href="disqus_multiple.js"/>
-	</check>
+      	<check if="{{@feedattr.disqus}}">
+      	      	<include href="disqus_multiple.js"/>
+      	</check>
     </check>
     <check if="{{@feedattr.commentsystem == 'firtz'}}">
       	<include href="comments.js"/>
     </check>    
     ```
+    
+* Der Ordner comments/admin benötigt einen Verzeichnisschutz.
+Im Zweifel bitte an den Provider wenden.
+
+* Der Ordner comments/files benötigt Schreibrechte, damit dort die Kommentardateien abgelegt werden können.  
+Im Zweifel auch hier an den Provider wenden.
+
+
+##Administration
+Prinzipiell werden alle neuen Kommentare erst einmal zur Moderation eingetragen. Sie sind also erstmal nicht sichtbar.
+Um diese Kommentare freizuschalten, müsst ihr euch in den Adminbereich einloggen (Siehe Hinweis bei Installation zum Thema Verzeichnisschutz).
+Hierzu geht ihr auf http://urlderwebseite.xxx/comments/admin und loggt euch ein.
+Nun habt ihr die Möglichkeit, die Kommentare, sofern vorhanden, auszublenden, einzublenden oder zu löschen.
+
+
+##Importer
 
 
 ##Kontakt
