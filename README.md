@@ -116,5 +116,5 @@ Für den Fall, das ihr bereits Kommentare in eurem Firtz habt, die noch bei Disq
 
 ##Kontakt
 
-[E-Mail](mailto:ronbuehler@live.de) || [Twitter](https://twitter.com/ronbuehler) || [app.net](https://alpha.app.net/ronbuehler)
+Ron Bühler [E-Mail](mailto:ronbuehler@live.de) || [Twitter](https://twitter.com/ronbuehler) || [app.net](https://alpha.app.net/ronbuehler)
 
