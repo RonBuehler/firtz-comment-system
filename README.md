@@ -7,11 +7,11 @@
 Dieses Kommentarsystem für den [firtz podcast publisher](http://firtz.org/) entstand aus der Idee heraus, das darin eingebundene Disqus-Kommentarsystem durch eine Eigenentwicklung zu ersetzen um von diesem Dienst unabhängig zu sein.
 
 ##Voraussetzungen
-Eine laufende [Firtz-Installation](https://github.com/eazyliving/firtz/)
+* Eine laufende [Firtz-Installation](https://github.com/eazyliving/firtz/)
 
 
 ##Installation
-Folgende Schritte müssen für die Installation durchgeführt werden
+Folgende Schritte müssen für die Installation durchgeführt werden:
 
 
 ##Kontakt
