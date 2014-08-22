@@ -10,6 +10,7 @@ Dieses Kommentarsystem für den [firtz podcast publisher](http://firtz.org/) ent
 
 ##Voraussetzungen
 * Eine laufende [Firtz-Installation](https://github.com/eazyliving/firtz/)
+* Rechte um auf dem Server Dateien schreiben zu können, Verzeichnisrechte zu setzen und Verzeichnisse zu schützen
 
 
 ##Installation
